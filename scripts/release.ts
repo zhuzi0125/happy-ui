@@ -88,7 +88,7 @@ async function generateChangelog() {
  */
 async function push(nextVersion: string) {
   timeLog('推送代码至git仓库', 'start');
-  await run('git add package.json CHANGELOG.md');
+  await run('git add .');
   await run(`git commit -m "v${nextVersion}" -n`);
   await run('git push');
   timeLog('推送代码至git仓库', 'end');
