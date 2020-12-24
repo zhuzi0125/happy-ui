@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "happy-ui": [
+        "src/components/index.ts"
+      ],
+      "happy-ui/esm/*": [
+        "src/components/*"
+      ],
+      "happy-ui/lib/*": [
+        "src/components/*"
+      ]
+    },
+    "target": "esnext", //版本
+    "module": "commonjs", //格式
+    "jsx": "react",
+    "declaration": true, //为每一个ts文件生成 .d.ts文件
+    "declarationDir": "lib", //目录
+    "strict": true,
+    "moduleResolution": "node", // 规定寻找引入文件的路径为 node 标准
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true, //是否允许编译js文件
+    "isolatedModules": true, //是否将每个文件作为单独模块
+    // "noEmit": true //不生成编译文件
+  },
+  "include": [
+    "src/components",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
